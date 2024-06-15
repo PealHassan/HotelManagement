@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const app = express();   
+const app = express();  
+const cors = require('cors'); 
 const dbconfig = require('./db');
 const usersRoute = require('./routes/userRoute');
 const roomsRoute = require('./routes/roomRoute');
@@ -10,7 +11,13 @@ const ticketbookRoute = require('./routes/ticketbookingRoute');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-
+app.use(cors(
+    {
+        origin : ["https://hotel-management-five-steel.vercel.app/"],
+        methods : ["POST","GET"],
+        credentials : true
+    }
+));
 // API Routes
 app.use('/api/rooms', roomsRoute);
 app.use('/api/users', usersRoute);
