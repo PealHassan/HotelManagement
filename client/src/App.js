@@ -25,7 +25,7 @@ function App() {
           <Route path="/home" element={<Homescreen/>} />
           <Route path="/book/:roomid/:fromdate/:todate" element={<Bookingscreen/>} />
           <Route path="/addTicket" element={<Ticketscreen/>} />
-          <Route path="/login" element = {<Loginscreen/>}/>
+          <Route path="https://hotel-management-five-steel.vercel.app/login" element = {<Loginscreen/>}/>
           <Route path="/register" element = {<Registerscreen/>}/>
           <Route path="/addPackage" element = {<Addpackage/>}/>
           <Route path="/addTicket/selectedPackages" element={<Selectedpackages/>} />
