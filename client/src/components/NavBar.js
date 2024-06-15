@@ -32,7 +32,7 @@ function NavBar() {
                                         <li><a class="dropdown-item" href="/addTicket">Tickets</a></li>
                                         <li><a class="dropdown-item" href="/addPackage">Add Package</a></li>
                                         <li><a class="dropdown-item" href="/addNewRoom">Add New Room</a></li>
-                                        <li><a class="dropdown-item" href="#" onClick={logout}>Log Out</a></li>
+                                        <li><a class="dropdown-item" onClick={logout}>Log Out</a></li>
 
                                     </ul>
                                 </div>

@@ -60,7 +60,7 @@ function Ticketscreen() {
     const handleInputChange = (id, field, value, value2, value3) => {
         setPackageDetails(prevState => ({
             ...prevState,
-            [id]: { ...prevState[id], [field]: value, ['costPerHour']: value3, ['charge']: value2 }
+            [id]: { ...prevState[id], [field]: value, 'costPerHour': value3, 'charge': value2 }
         }));
     };
 

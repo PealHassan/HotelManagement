@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Room({room,fromdate,todate}) {
@@ -8,7 +8,7 @@ function Room({room,fromdate,todate}) {
     return (
         <div className = 'row bs'>
             <div className = "col-md-4">
-                <img src = {room.imageUrls[0]} className = "smallimg"/>
+                <img src = {room.imageUrls[0]} className = "smallimg" alt = "Room Image"/>
             </div>
             <div className = "col-md-7">
                 <h1>{room.roomId}</h1>

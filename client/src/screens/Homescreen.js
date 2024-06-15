@@ -5,7 +5,7 @@ import 'antd/dist/antd';
 import moment from 'moment';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import { DatePicker, Space } from 'antd';
+import { DatePicker} from 'antd';
 const { RangePicker } = DatePicker;
 function Homescreen() {
   const [rooms, setrooms] = useState([]);
@@ -85,7 +85,7 @@ function Homescreen() {
           }
         }
       }
-      if (availability == true || room.currentBookings.length == 0) {
+      if (availability === true || room.currentBookings.length === 0) {
         temprooms.push(room);
       }
       
@@ -98,7 +98,7 @@ function Homescreen() {
   function filterByType(e) {
     settype(e);
     if (e !== `All`) {
-      const temprooms = chosenrooms.filter(room => room.type.toLowerCase() == e.toLowerCase());
+      const temprooms = chosenrooms.filter(room => room.type.toLowerCase() === e.toLowerCase());
       setrooms(temprooms);
     }
     else setrooms(chosenrooms);

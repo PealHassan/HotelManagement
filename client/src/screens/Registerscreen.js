@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState,useEffect} from "react";
+import React, {useState} from "react";
 import Loader from '../components/Loader'
 import Error from '../components/Error'
 import Success from '../components/Success'
@@ -15,7 +15,7 @@ function Registerscreen() {
     const [success,setsuccess] = useState(false);
 
     async function register() {
-        if(password == cpassword) {
+        if(password === cpassword) {
             const user = {
                 name,  
                 email,
@@ -23,7 +23,7 @@ function Registerscreen() {
             }
             try {
                 setloading(true);
-                const result = await axios.post(`/api/users/register`,user)
+                await axios.post(`/api/users/register`,user)
                 seterror(false);
                 setloading(false);  
                 setsuccess(true);

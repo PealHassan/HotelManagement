@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import { useState } from 'react'
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import Swal from 'sweetalert2';

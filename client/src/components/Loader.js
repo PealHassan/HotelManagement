@@ -2,8 +2,7 @@ import { useState } from "react";
 import React  from "react";
 import HashLoader from "react-spinners/HashLoader";
 function Loader() {
-    let [loading, setLoading] = useState(true);
-    let [color, setColor] = useState("#ffffff");
+    var loading = true;
     // const override = css`
     //     display: "block",
     //     margin: "0 auto",

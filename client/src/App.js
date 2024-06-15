@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import NavBar from './components/NavBar';
 import Homescreen from './screens/Homescreen';
@@ -6,7 +6,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Loginscreen from './screens/Loginscreen';
 import Registerscreen from './screens/Registerscreen';
 import Ticketscreen from './screens/Ticketscreen';
-import { useState } from 'react';
 import Bookingscreen from './screens/Bookingscreen';
 import Addpackage from './screens/Addpackage';
 import Selectedpackages from './screens/Selectedpackages';

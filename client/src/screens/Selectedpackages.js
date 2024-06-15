@@ -30,7 +30,7 @@ function Selectedpackages() {
         };
 
         countTotal();
-    }, []);
+    });
     function sendDocument() {
 
         const bookinginfo = {
@@ -68,7 +68,7 @@ function Selectedpackages() {
         }
         try {
             setloading(true);
-            const result = await axios.post(`/api/ticketbook/addticket`, ticket).data;
+            await axios.post(`/api/ticketbook/addticket`, ticket).data;
             setloading(false);
             Swal.fire({
                 title: "Success",
