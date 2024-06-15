@@ -19,7 +19,7 @@ app.use(cors(
     }
 ));
 // API Routes
-app.use('/api/rooms', roomsRoute);
+app.use('/rooms', roomsRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/booking', bookRoute);
 app.use('/api/packages', packageRoute);
