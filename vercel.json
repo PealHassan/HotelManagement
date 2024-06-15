@@ -5,6 +5,9 @@
         "use": "@vercel/static-build",
         "config": {
           "distDir": "client/build"
+        },
+        "env": {
+          "CI": "false"
         }
       },
       {
