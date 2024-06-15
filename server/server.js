@@ -8,34 +8,18 @@ const roomsRoute = require('./routes/roomRoute');
 const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
-const bodyParser = require('body-parser');
-const { urlencoded, json } = require('body-parser');
-
-// Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cors());
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
-// API Routes
+
 app.use('/api/rooms', roomsRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/booking', bookRoute);
 app.use('/api/packages', packageRoute);
 app.use('/api/ticketbook', ticketbookRoute);
-// app.get("/", (req, res) => {
-//     app.use(express.static(path.resolve(__dirname, "client", "build")));
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//     });
-
-app.get('*',(req,res,next)=>{
-    res.status(200).json({
-      message:'bad request'
-    })
-  })
 
 const port = process.env.PORT || 5000;
-// module.exports = app;
 
 
-// app.listen(port, () => console.log(`Node server started on port ${port}`));
-module.exports = app;
+
+app.listen(port, () => console.log(`Node server started on port ${port}`));
+module.exports = app; 
+

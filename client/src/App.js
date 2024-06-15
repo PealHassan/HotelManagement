@@ -33,12 +33,6 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/printbookingdocument" element={<Printbookingscreen/>} />
           <Route path="/printticketdocument" element={<Printticketscreen/>} />
-
-          
-
-
-
-
         </Routes>
       </BrowserRouter>
     </div>

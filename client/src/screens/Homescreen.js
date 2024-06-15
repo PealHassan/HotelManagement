@@ -21,7 +21,7 @@ function Homescreen() {
     const fetchData = async () => {
       try {
         setloading(true);
-        const { data } = await axios.get(`${window.location.origin}/api/rooms/getallrooms`);
+        const { data } = await axios.get(`/api/rooms/getallrooms`);
         setrooms(data);
         setduplicaterooms(data);
         setchosenrooms(data);

@@ -22,7 +22,7 @@ function Addpackage() {
         console.log(ticket);
         try {
             setloading(true);
-            const result = await axios.post(`${window.location.origin}/api/packages/addpackage`, ticket)
+            const result = await axios.post(`/api/packages/addpackage`, ticket)
             console.log(`i am her ${result}`)
             setloading(false);
             setsuccess(true);

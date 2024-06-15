@@ -67,7 +67,7 @@ function Selectedpackages() {
         }
         try {
             setloading(true);
-            const result = await axios.post(`${window.location.origin}/api/ticketbook/addticket`, ticket).data;
+            const result = await axios.post(`/api/ticketbook/addticket`, ticket).data;
             setloading(false);
             Swal.fire({
                 title: "Success",

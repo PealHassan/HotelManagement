@@ -23,7 +23,7 @@ function Registerscreen() {
             }
             try {
                 setloading(true);
-                const result = await axios.post(`${window.location.origin}/api/users/register`,user)
+                const result = await axios.post(`/api/users/register`,user)
                 seterror(false);
                 setloading(false);  
                 setsuccess(true);

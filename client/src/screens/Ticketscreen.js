@@ -14,7 +14,7 @@ function Ticketscreen() {
         const fetchData = async () => {
             try {
                 setloading(true);
-                const { data } = await axios.get(`${window.location.origin}/api/packages/getallpackages`);
+                const { data } = await axios.get(`/api/packages/getallpackages`);
                 setPackages(data);
                 const initialDetails = data.reduce((acc, pack) => {
                     acc[pack._id] = { checked: false, totalHours: 0, costPerHour: pack.costPerHour, charge: 0 };

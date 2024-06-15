@@ -20,6 +20,7 @@ function Loginscreen() {
             console.log(user);
             try {
                 setloading(true);
+                console.log(user);
                 const result = await axios.post('/api/users/login',user)
                 console.log(result)
                 setloading(false);  
