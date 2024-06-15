@@ -24,10 +24,10 @@ app.use('/api/users', usersRoute);
 app.use('/api/booking', bookRoute);
 app.use('/api/packages', packageRoute);
 app.use('/api/ticketbook', ticketbookRoute);
-// app.get("/", (req, res) => {
-//     app.use(express.static(path.resolve(__dirname, "client", "build")));
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-//     });
+app.get("/", (req, res) => {
+    app.use(express.static(path.resolve(__dirname, "client", "build")));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
 
 const port = process.env.PORT || 5000;
 // module.exports = app;
