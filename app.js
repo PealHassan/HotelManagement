@@ -8,16 +8,14 @@ const roomsRoute = require('./routes/roomRoute');
 const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
+const bodyParser = require('body-parser');
+const { urlencoded, json } = require('body-parser');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cors(
-    {
-        origin : ["https://hotel-management-five-steel.vercel.app"],
-        methods : ["POST","GET"],
-        credentials : true
-    }
-));
+app.use(cors());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 // API Routes
 app.use('/api/rooms', roomsRoute);
 app.use('/api/users', usersRoute);
