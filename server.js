@@ -8,7 +8,7 @@ const roomsRoute = require('./routes/roomRoute');
 const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
-
+module.exports = app;
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.use(cors(
