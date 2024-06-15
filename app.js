@@ -11,13 +11,13 @@ const ticketbookRoute = require('./routes/ticketbookingRoute');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-// app.use(cors(
-//     {
-//         origin : ["https://hotel-management-five-steel.vercel.app"],
-//         methods : ["POST","GET"],
-//         credentials : true
-//     }
-// ));
+app.use(cors(
+    {
+        origin : ["https://hotel-management-five-steel.vercel.app"],
+        methods : ["POST","GET"],
+        credentials : true
+    }
+));
 // API Routes
 app.use('/api/rooms', roomsRoute);
 app.use('/api/users', usersRoute);
