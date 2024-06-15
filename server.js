@@ -13,7 +13,7 @@ const ticketbookRoute = require('./routes/ticketbookingRoute');
 app.use(express.json());
 app.use(cors(
     {
-        origin : ["https://hotel-management-five-steel.vercel.app/"],
+        origin : ["https://hotel-management-five-steel.vercel.app"],
         methods : ["POST","GET"],
         credentials : true
     }
