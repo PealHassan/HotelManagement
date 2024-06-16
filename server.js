@@ -8,8 +8,12 @@ const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
 
-var cors = require('cors');
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://your-vercel-app.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 require('dotenv').config();
 
