@@ -10,7 +10,7 @@ const ticketbookRoute = require('./routes/ticketbookingRoute');
 
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://hotel-management-chi-lilac.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
