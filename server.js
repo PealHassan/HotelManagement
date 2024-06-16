@@ -9,6 +9,7 @@ const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
 app.use(express.json());
+require('dotenv').config();
 
 app.use('/api/rooms', roomsRoute);
 app.use('/api/users', usersRoute);
