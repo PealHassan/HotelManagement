@@ -47,12 +47,13 @@ router.post("/addRoom",async(req,res) =>{
     }
 })
 router.get("/getallrooms",async(req,res) =>{
-    try {
-        const rooms = await room.find({})
-        return res.send(rooms)
-    }catch(error) {
-        return res.status(400).json({message : error});
-    }
+    res.send("we entered room");
+    // try {
+    //     const rooms = await room.find({})
+    //     return res.send(rooms)
+    // }catch(error) {
+    //     return res.status(400).json({message : error});
+    // }
 })
 router.post("/getroombyid",async(req,res) =>{
     const roomid = req.body.id;
