@@ -35,6 +35,6 @@ app.use('/',(req,res) => {
 
 
 
-app.listen(5000, () => console.log(`Node server started on port ${port}`));
+app.listen(5000, () => console.log(`Node server started on port 5000`));
 // module.exports = app; 
 
