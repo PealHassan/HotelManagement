@@ -15,9 +15,9 @@ const ticketbookRoute = require('./routes/ticketbookingRoute');
 //   credentials: true
 // }));
 // app.use(express.json());
-app.use('/',(req,res) => {
-  res.send("server is running");
-})
+// app.use('/',(req,res) => {
+//   res.send("server is running");
+// })
 // require('dotenv').config();
 
 app.use('/api/rooms', roomsRoute);
