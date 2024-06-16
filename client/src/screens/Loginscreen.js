@@ -19,7 +19,7 @@ function Loginscreen() {
             try {
                 setloading(true);
                 console.log(user);
-                const result = await axios.post('/api/users/login',user)
+                const result = await axios.post('https://hotel-management-chi-lilac.vercel.app/api/users/login',user)
                 console.log(result)
                 setloading(false);    
                 seterror(false);

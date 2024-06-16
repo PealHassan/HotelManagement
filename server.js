@@ -1,13 +1,15 @@
 const express = require('express');
 const path = require('path');
 const app = express();  
-const cors = require('cors'); 
 const dbconfig = require('./db');
 const usersRoute = require('./routes/userRoute');
 const roomsRoute = require('./routes/roomRoute');
 const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
+
+var cors = require('cors');
+app.use(cors());
 app.use(express.json());
 require('dotenv').config();
 
