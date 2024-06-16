@@ -26,7 +26,7 @@ app.use('/',(req,res) => {
 // app.use('/api/packages', packageRoute);
 // app.use('/api/ticketbook', ticketbookRoute);
 
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
 // app.use(express.static(path.join(__dirname, 'client/build')));
 
 // app.get('*', (req, res) => {
@@ -35,6 +35,6 @@ const port = process.env.PORT || 5000;
 
 
 
-app.listen(port, () => console.log(`Node server started on port ${port}`));
+app.listen(5000, () => console.log(`Node server started on port ${port}`));
 // module.exports = app; 
 
