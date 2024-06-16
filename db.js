@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-
-var mongoUrl = 'mongodb+srv://pealhassan:kvzoszhhzm@hotelmanagement.j8lqtgl.mongodb.net/Rooms';
+require('dotenv').config();
+var mongoUrl = 'mongodb+srv://pealhassan:kvzoszhhzm@hotelmanagement.j8lqtgl.mongodb.net/?retryWrites=true&w=majority&appName=HotelManagement/Rooms';
+// var mongoUrl = process.env.MONGO_URI;
 
 mongoose.connect(mongoUrl);
 
