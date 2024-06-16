@@ -15,7 +15,10 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
-require('dotenv').config();
+app.use('/',(req,res) => {
+  res.send("server is running");
+})
+// require('dotenv').config();
 
 app.use('/api/rooms', roomsRoute);
 app.use('/api/users', usersRoute);

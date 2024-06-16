@@ -1,5 +1,5 @@
 /client/node_modules
-/client/backend/node_modules
+/server/node_modules
 
 /.pnp
 .pnp.js
