@@ -8,13 +8,13 @@ const bookRoute = require('./routes/bookingRoute');
 const packageRoute = require('./routes/packageRoute');
 const ticketbookRoute = require('./routes/ticketbookingRoute');
 
-// const cors = require('cors');
-// app.use(cors({
-//   origin: '*',
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   credentials: true
-// }));
-// app.use(express.json());
+const cors = require('cors');
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+app.use(express.json());
 // app.use('/',(req,res) => {
 //   res.send("server is running");
 // })
