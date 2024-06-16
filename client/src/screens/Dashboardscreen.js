@@ -104,31 +104,31 @@ const Dashboard = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const roomsResponse = await axios.get(`/api/rooms/total`);
+        const roomsResponse = await axios.get(`https://hotel-management-server-eight.vercel.app/api/rooms/total`);
         setTotalRooms(roomsResponse.data.totalRooms);
-        settotaldelux((await axios.get(`/api/rooms/totalDelux`)).data.totalRooms);
-        settotalnondelux((await axios.get(`/api/rooms/totalNonDelux`)).data.totalRooms);
+        settotaldelux((await axios.get(`https://hotel-management-server-eight.vercel.app/api/rooms/totalDelux`)).data.totalRooms);
+        settotalnondelux((await axios.get(`https://hotel-management-server-eight.vercel.app/api/rooms/totalNonDelux`)).data.totalRooms);
 
-        const earningsResponse = await axios.get(`/api/booking/earningsMonthly`);
+        const earningsResponse = await axios.get(`https://hotel-management-server-eight.vercel.app/api/booking/earningsMonthly`);
         setMonthlyBookingEarnings(earningsResponse.data);
 
-        const earningsTicketResponse = await axios.get(`/api/ticketbook/earningsMonthly`);
+        const earningsTicketResponse = await axios.get(`https://hotel-management-server-eight.vercel.app/api/ticketbook/earningsMonthly`);
         setMonthlyTicketEarnings(earningsTicketResponse.data);
 
         const mergedData = mergeAndSumData(earningsResponse.data, earningsTicketResponse.data);
         setMonthlyEarnings(mergedData);
 
-        const bookingsResponse = await axios.get(`/api/booking/bookingsMonthly`);
+        const bookingsResponse = await axios.get(`https://hotel-management-server-eight.vercel.app/api/booking/bookingsMonthly`);
         setMonthlyBookings(bookingsResponse.data);
         settotalbookings(countTotalBookings(bookingsResponse.data));
 
-        const roomwiseResponse = await axios.get(`/api/booking/bookingsRoomwise`);
+        const roomwiseResponse = await axios.get(`https://hotel-management-server-eight.vercel.app/api/booking/bookingsRoomwise`);
         setRoomwiseBookings(roomwiseResponse.data);
 
-        const ticketsResponse = await axios.get(`/api/ticketbook/monthly`);
+        const ticketsResponse = await axios.get(`https://hotel-management-server-eight.vercel.app/api/ticketbook/monthly`);
         setTicketPurchases(ticketsResponse.data);
 
-        const response = await axios.get(`/api/ticketbook/packageSalesMonthly`);
+        const response = await axios.get(`https://hotel-management-server-eight.vercel.app/api/ticketbook/packageSalesMonthly`);
         const { result: salesResult, packageNames: salesPackageNames } = processDataForChart(response.data);
         setData(salesResult);
         setPackageNames(salesPackageNames);
@@ -137,7 +137,7 @@ const Dashboard = () => {
         setEarningsData(earningsResult);
         setEarningsPackageNames(earningsPackageNames);
 
-        const response2 = await axios.get(`/api/ticketbook/packageEarnings`);
+        const response2 = await axios.get(`https://hotel-management-server-eight.vercel.app/api/ticketbook/packageEarnings`);
         const processedData = processEarningsData(response2.data);
         setEarningsData2(processedData);
         console.log(`i am here ${earningsData2}`);

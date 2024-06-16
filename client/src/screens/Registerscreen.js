@@ -23,7 +23,7 @@ function Registerscreen() {
             }
             try {
                 setloading(true);
-                await axios.post(`/api/users/register`,user)
+                await axios.post(`https://hotel-management-server-eight.vercel.app/api/users/register`,user)
                 seterror(false);
                 setloading(false);  
                 setsuccess(true);

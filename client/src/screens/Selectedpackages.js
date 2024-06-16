@@ -68,7 +68,7 @@ function Selectedpackages() {
         }
         try {
             setloading(true);
-            await axios.post(`/api/ticketbook/addticket`, ticket).data;
+            await axios.post(`https://hotel-management-server-eight.vercel.app/api/ticketbook/addticket`, ticket).data;
             setloading(false);
             Swal.fire({
                 title: "Success",

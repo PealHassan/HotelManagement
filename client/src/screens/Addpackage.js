@@ -21,7 +21,7 @@ function Addpackage() {
         console.log(ticket);
         try {
             setloading(true);
-            const result = await axios.post(`/api/packages/addpackage`, ticket)
+            const result = await axios.post(`https://hotel-management-server-eight.vercel.app/api/packages/addpackage`, ticket)
             console.log(`i am her ${result}`)
             setloading(false);
             setsuccess(true);

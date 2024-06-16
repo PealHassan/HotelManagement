@@ -34,7 +34,7 @@ function Addnewroom() {
                 imageUrls: [imageUrl], // Use the URL directly here
                 type
             };
-            const result = await axios.post(`/api/rooms/addRoom`, room);
+            const result = await axios.post(`https://hotel-management-server-eight.vercel.app/api/rooms/addRoom`, room);
             console.log(result.data);
             setloading(false);
             Swal.fire({

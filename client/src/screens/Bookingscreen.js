@@ -32,7 +32,7 @@ function Bookingscreen() {
         const x = {
           id: roomid,
         };
-        const dat = await axios.post(`/api/rooms/getroombyid`, x);
+        const dat = await axios.post(`https://hotel-management-server-eight.vercel.app/api/rooms/getroombyid`, x);
         setRoom(dat.data);
         setLoading(false);
       } catch (error) {
@@ -80,7 +80,7 @@ function Bookingscreen() {
     
 
     try {
-      const result = await axios.post(`/api/booking/bookroom`, bookingDetails);
+      const result = await axios.post(`https://hotel-management-server-eight.vercel.app/api/booking/bookroom`, bookingDetails);
       console.log(result.data);
       setLoading(false);
       Swal.fire({
