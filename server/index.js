@@ -17,9 +17,9 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
-app.use('/',(req,res) => {
-  res.send("server is running");
-})
+// app.use('/',(req,res) => {
+//   res.send("server is running");
+// })
 
 
 app.use('/api/rooms', roomsRoute);
