@@ -16,6 +16,13 @@ A **full-fledged Hotel Management System** that provides a **Manager Panel** and
 🔑 Password: `1234`  
 
 ---
+## 📹 YouTube Video Demonstration
+
+Check out the video demonstration of this project on YouTube:
+
+[Watch the YouTube Video](https://www.youtube.com/your-video-link)
+
+---
 
 ## 📌 Features
 
