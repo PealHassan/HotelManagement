@@ -99,4 +99,19 @@ cd server && npm install  # Install backend dependencies
 cd server && npm start  
 
 # Start the frontend
-cd client && npm start  
+cd client && npm start
+
+```
+
+---
+
+## 📬 **Contact Information**
+
+For any inquiries, feedback, or collaboration opportunities, feel free to reach out:  
+
+👤 **MD. Peal Hassan**  
+📧 **Email:** [pealhasan6@gmail.com](mailto:pealhasan6@gmail.com)  
+🔗 **LinkedIn:** [Peal Hassan](https://www.linkedin.com/in/pealhassan/)  
+
+💡 If you find this project helpful, consider giving it a ⭐ on GitHub!
+
